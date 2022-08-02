@@ -1,0 +1,23 @@
+{
+  "name": "catering-service-page",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "local":"live-server --host=127.0.0.1 --port=3300 --no-browser"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarcoBardalesRodriguez/catering-service-page.git"
+  },
+  "author": "MarcoBardalesRodriguez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MarcoBardalesRodriguez/catering-service-page/issues"
+  },
+  "homepage": "https://github.com/MarcoBardalesRodriguez/catering-service-page#readme",
+  "dependencies": {
+    "live-server": "^1.2.2"
+  }
+}

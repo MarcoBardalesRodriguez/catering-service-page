@@ -92,7 +92,7 @@ nav .center a:hover {
 .dark-overlay {
   width: 100%;
   height: 100%;
-  background-color: #0007;
+  background-color: #0009;
 }
 h2 {
   text-align: center;
@@ -120,7 +120,7 @@ hr {
 section:nth-child(1) {
   width: 100%;
   height: 80vh;
-  background-image: url(recursos/pexels-rose-12903947.jpg);
+  background-image: url(src/buffet.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -128,7 +128,7 @@ section:nth-child(1) {
 section:nth-child(1) h1 {
   text-align: center;
   position: relative;
-  top: 40%;
+  top: 20%;
   margin: 0 10%;
 
   font-size: 5rem;
@@ -166,7 +166,7 @@ section:nth-child(3) {
   height: 33vh;
   width: 100%;
 
-  background-image: url(recursos/food-table.jpg);
+  background-image: url(src/midle-image.jpeg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -312,22 +312,129 @@ form textarea {
   border-bottom: 1.5px solid #000;
   padding-top: 1rem;
 }
-#form-button {
-  box-sizing: inherit;
-  width: 12%;
-  min-width: 130px;
-  font-size: 1.4rem;
-  text-align: center;
-  padding: 0.5rem 0;
+  /* CSS */
+.button-82-pushable {
   position: relative;
   left: 45%;
-  border: 1px solid red;
-  border-radius: 5px;
-  box-shadow: 1px 1px 5px #000;
-  background-color: #f77;
-  letter-spacing: 1px;
-  text-transform: uppercase;
+  border: none;
+  background: transparent;
+  padding: 0;
+  margin-top: 2rem;
+  cursor: pointer;
+  outline-offset: 4px;
+  transition: filter 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
 }
+
+.button-82-shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: hsl(0deg 0% 0% / 0.25);
+  will-change: transform;
+  transform: translateY(2px);
+  transition:
+          transform
+          600ms
+          cubic-bezier(.3, .7, .4, 1);
+}
+
+.button-82-edge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: linear-gradient(
+          to left,
+          hsl(340deg 100% 16%) 0%,
+          hsl(340deg 100% 32%) 8%,
+          hsl(340deg 100% 32%) 92%,
+          hsl(340deg 100% 16%) 100%
+  );
+}
+
+.button-82-front {
+  display: block;
+  position: relative;
+  padding: 12px 27px;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  color: white;
+  background: hsl(345deg 100% 47%);
+  will-change: transform;
+  transform: translateY(-4px);
+  transition:
+          transform
+          600ms
+          cubic-bezier(.3, .7, .4, 1);
+}
+
+@media (min-width: 768px) {
+  .button-82-front {
+    font-size: 1.25rem;
+    padding: 12px 42px;
+  }
+}
+
+.button-82-pushable:hover {
+  filter: brightness(110%);
+  -webkit-filter: brightness(110%);
+}
+
+.button-82-pushable:hover .button-82-front {
+  transform: translateY(-6px);
+  transition:
+          transform
+          250ms
+          cubic-bezier(.3, .7, .4, 1.5);
+}
+
+.button-82-pushable:active .button-82-front {
+  transform: translateY(-2px);
+  transition: transform 34ms;
+}
+
+.button-82-pushable:hover .button-82-shadow {
+  transform: translateY(4px);
+  transition:
+          transform
+          250ms
+          cubic-bezier(.3, .7, .4, 1.5);
+}
+
+.button-82-pushable:active .button-82-shadow {
+  transform: translateY(1px);
+  transition: transform 34ms;
+}
+
+.button-82-pushable:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/*#form-button {*/
+/*  box-sizing: inherit;*/
+/*  width: 12%;*/
+/*  min-width: 130px;*/
+/*  font-size: 1.4rem;*/
+/*  text-align: center;*/
+/*  padding: 0.5rem 0;*/
+/*  position: relative;*/
+/*  left: 45%;*/
+/*  border: 1px solid red;*/
+/*  border-radius: 5px;*/
+/*  box-shadow: 1px 1px 5px #000;*/
+/*  background-color: #f77;*/
+/*  letter-spacing: 1px;*/
+/*  text-transform: uppercase;*/
+/*  */
+/*}*/
 
 form > div:nth-child(1) input:hover {
   background-image: linear-gradient(180deg, #eee, #888);
